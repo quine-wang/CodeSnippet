@@ -3,26 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vdl</string>
+	<string>log</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-</string>
+	<string>NSLog(@"&lt;#content#&gt;", &lt;#variables#&gt;);</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3BC3EC11-78C6-47BA-A175-D6EDA53A0565</string>
+	<string>9DE3E003-9EC7-4AA5-8801-786202F32DCC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View Did Load</string>
+	<string>Log</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
