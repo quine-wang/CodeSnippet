@@ -3,23 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vdl</string>
+	<string>tcfr</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-</string>
+	<string>- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellReuseId = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellReuseId];
+    }
+    
+    // Configure the cell...
+    
+    return cell;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>3BC3EC11-78C6-47BA-A175-D6EDA53A0565</string>
+	<string>FDB8C7A0-7C66-478D-BCA9-40D9094FB112</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>View Did Load</string>
+	<string>Table View Cell</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
