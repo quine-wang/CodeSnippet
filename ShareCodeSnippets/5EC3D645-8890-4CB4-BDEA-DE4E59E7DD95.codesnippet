@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>svw</string>
+	<string>qunarblue</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>self.view.bounds.size.width</string>
+	<string>#define QUNAR_BLUE [UIColor colorWithRed:0.000f green:0.749f blue:0.780f alpha:1.00f]</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>AE1CAC86-DC9F-4B70-8DF0-23775331FEA4</string>
+	<string>5EC3D645-8890-4CB4-BDEA-DE4E59E7DD95</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>self bounds width</string>
+	<string>Qunar Blue UIColor</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

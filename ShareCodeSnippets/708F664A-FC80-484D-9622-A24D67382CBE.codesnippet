@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static ExprProcessor* instance;
+	<string>static &lt;#class name#&gt;* instance;
 
 + (instancetype)getNewInstance
 {
