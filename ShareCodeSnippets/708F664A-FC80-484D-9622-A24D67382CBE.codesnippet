@@ -9,11 +9,9 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>static &lt;#class name#&gt;* instance;
-
-+ (instancetype)getNewInstance
+	<string>+ (instancetype)sharedInstance
 {
-    
+    static &lt;#class name#&gt;* instance;
     static dispatch_once_t onceToken;
     dispatch_once(&amp;onceToken, ^{
         instance = [[&lt;#class name#&gt; alloc] init];
