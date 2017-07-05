@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sop</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSArray *)orderedArrayOfAllPaymentMethods {
+    NSMutableArray *orderedArray = [[NSMutableArray alloc] init];
+    NSMutableDictionary *sortDict = [[NSMutableDictionary alloc] init];
+    // 取支付方式优先级，将支付方式的key放入字典 =&gt; sortDict
+    for (QNPPayBaseItem *baseItem in _currentProductArray) {
+        NSNumber *priority = [self priorityOfPaymentMethod:baseItem.idenTi];
+        if (priority) {
+            [sortDict setObject:priority forKey:baseItem.idenTi];
+        }
+    }
+    // 所有支付方式按优先级（value）排序 =&gt; orderedArray
+    NSArray *keyArray = [sortDict keysSortedByValueUsingComparator:
+                         ^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+                             return [obj1 compare:obj2];
+                         }];
+    for (NSString *key in keyArray) {
+        [orderedArray addObject:[_currentProductDict objectForKey:key]];
+    }
+    return [orderedArray copy];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6BD09B4B-9607-4C67-AF83-2702B912BB6C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>priority sort</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

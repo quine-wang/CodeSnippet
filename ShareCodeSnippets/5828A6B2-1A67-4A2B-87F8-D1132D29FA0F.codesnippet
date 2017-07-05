@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>spd</string>
+	<string>logf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt;* &lt;#name#&gt;;</string>
+	<string>NSLog(@"frame:%@", NSStringFromCGRect(&lt;#frame#&gt;));</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E0F8484F-1F56-4B20-8707-1D5C7E248F8A</string>
+	<string>5828A6B2-1A67-4A2B-87F8-D1132D29FA0F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property Definition</string>
+	<string>log frame</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

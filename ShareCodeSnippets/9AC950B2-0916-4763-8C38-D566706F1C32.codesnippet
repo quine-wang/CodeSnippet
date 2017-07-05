@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>spd</string>
+	<string>pm</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#type#&gt;* &lt;#name#&gt;;</string>
+	<string>#pragma mark - private method</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>E0F8484F-1F56-4B20-8707-1D5C7E248F8A</string>
+	<string>9AC950B2-0916-4763-8C38-D566706F1C32</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Strong Property Definition</string>
+	<string>pragma mark</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
