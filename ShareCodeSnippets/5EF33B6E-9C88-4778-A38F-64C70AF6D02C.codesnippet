@@ -3,19 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>slc</string>
+	<string>lpv</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/** &lt;#Description#&gt; */</string>
+	<string>    NSString *jsfile = [[NSBundle mainBundle] pathForResource:@"&lt;#js file#&gt;" ofType:nil];
+    NSError *err = [JSBandageGenerator runJSFile:jsfile];
+    if (err) {
+        NSLog(@"%@", err);
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>35F0FC34-97FF-4DED-8CFC-23D81D640A9A</string>
+	<string>5EF33B6E-9C88-4778-A38F-64C70AF6D02C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Single-line Block Comment</string>
+	<string>Local patch validate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

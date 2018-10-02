@@ -3,19 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>slc</string>
+	<string>occ</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/** &lt;#Description#&gt; */</string>
+	<string>@interface &lt;#class name#&gt; : NSObject
+@end</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>35F0FC34-97FF-4DED-8CFC-23D81D640A9A</string>
+	<string>92D737F6-C336-43D5-A102-4B219BC1A5B6</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Single-line Block Comment</string>
+	<string>OC Class Definition</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>slc</string>
+	<string>tdc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/** &lt;#Description#&gt; */</string>
+	<string>// TODO:MR &lt;# 描述 #&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>35F0FC34-97FF-4DED-8CFC-23D81D640A9A</string>
+	<string>F497EE5D-13DB-4C43-8706-97643C3BC1B9</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Single-line Block Comment</string>
+	<string>To Do Comment</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
