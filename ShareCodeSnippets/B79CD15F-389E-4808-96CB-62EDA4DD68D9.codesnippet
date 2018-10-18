@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cnb</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (void)configNebulaSDK {
+    // 控件创建
+    [NBServiceConfigurationGet() setViewControllerClass:[CustomViewController class]];
+    [NBServiceConfigurationGet() setContentViewClass:[UIWebView class]];
+    
+    // 自定义插件配置
+    NSString *plist_filePath = [[NSBundle mainBundle].bundlePath stringByAppendingFormat:@"/%@/%@", @"DemoPlugins.bundle", @"Poseidon-Extra-Config.plist"];
+    [NBServiceConfigurationGet() setExtraPluginsFilePath:plist_filePath];
+    
+    // 包管理服务器配置(没有包管理服务器时不要设置如下项)
+    [NBServiceConfigurationGet() setEnvironment:NBEnvironment_Custom];
+    [NBServiceConfigurationGet() setServerURLString4UpdateApps:@"http://nebula.stable.alipay.net/api/app"];
+    [NBServiceConfigurationGet() setClientVersion:@"1.0"];
+    [NBServiceConfigurationGet() setChannel:NBChannel_Offical];
+    [NBServiceConfigurationGet() setClientBundleId:@"com.nebula.demo"];
+    NAMConfiguration *appConfig = NAMConfigurationGet();
+    
+    // 预置包配置（可以脱离包管理服务器）
+    [NBServiceConfigurationGet().appConfig setPresetApplistPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"DemoPresetApps.bundle/NAMApplist.plist"] ofType:nil]];
+    [NBServiceConfigurationGet().appConfig setPresetAppPackagePath:[[NSBundle mainBundle] pathForResource:@"DemoPresetApps.bundle" ofType:nil]];
+    
+    // 离线包管理设置（验签公钥、公共资源包、离线包下载器）
+    //    [NBServiceConfigurationGet() setIsNeed2VerifyApp:NO];  //关闭离线包验签
+    NSString *pubpem = [[NSBundle mainBundle] pathForResource:@"public_key" ofType:@"pem"];
+    [NBServiceConfigurationGet().appConfig setSignPublicKey: [NSString stringWithContentsOfFile:pubpem encoding:NSUTF8StringEncoding error:nil]];
+    [NBServiceConfigurationGet() setCommonResourceAppList:@[@"77777777"]];
+    [NBServiceConfigurationGet().appConfig setRequestManager:[NARequestManager sharedInctance]];
+    
+//    // 监控委托
+//    [NBMonitor defaultMonitor].delegate = [H5Monitor sharedInstance];
+    
+    // 启动服务
+    NAMServiceGet();
+    [NBServiceGet() start];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B79CD15F-389E-4808-96CB-62EDA4DD68D9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Config Nebla SDK</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
