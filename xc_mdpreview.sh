@@ -61,7 +61,7 @@ done
 # xcode工程 & 存在
 if [[ -d $XCODE_PROJECT_DIR ]]; then
 	NAME=`basename $XCODE_PROJECT_DIR`
-	if [[ "${NAME##*.}" != 'xcodeproj' ]]; then
+	if [[ "${NAME##*.}" != 'xcodeproj' ]] && [[ "${NAME##*.}" != 'xcworkspace' ]]; then
 		echo "xcode工程格式不正确"
 		exit 1
 	fi

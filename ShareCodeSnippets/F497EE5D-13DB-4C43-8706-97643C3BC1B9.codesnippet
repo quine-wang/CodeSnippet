@@ -9,11 +9,13 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// TODO:MR &lt;# 描述 #&gt;</string>
+	<string>// TODO: MR &lt;# 描述 #&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F497EE5D-13DB-4C43-8706-97643C3BC1B9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>To Do Comment</string>
 	<key>IDECodeSnippetUserSnippet</key>
