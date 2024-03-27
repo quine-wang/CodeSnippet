@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>exs</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import BDPExtensionKit
+
+/// &lt;#service name#&gt;服务协议
+@objc public protocol &lt;#name#&gt;ServiceProtocol {
+    
+}
+
+/// &lt;#service name#&gt;服务
+class &lt;#name#&gt;Service: NSObject, &lt;#name#&gt;ServiceProtocol, BDPExtensionServiceProtocol {
+    var extensionServiceContext: BDPExtensionServiceContextProtocol = BDPExtensionServiceEmptyContext()
+    weak var extensionServiceDelegate: AnyObject?
+}
+
+// MARK: BDPExtensionServiceProtocol
+extension &lt;#name#&gt;Service {
+    func extensionServiceCapabilities() -&gt; [BDPExtensionServiceCapabilityProtocol] {
+        var capabilities: [BDPExtensionServiceCapabilityProtocol] = []
+        
+        // ***可选，不需要该能力可删除此行***
+        if let communicationCapability { // 服务通信
+            capabilities.append(communicationCapability)
+        }
+        
+        // ***可选，不需要该能力可删除此行***
+        if let dispatchCapability { // 事件分发
+            capabilities.append(dispatchCapability)
+        }
+        
+        // ***可选，不需要该能力可删除此行***
+        if let delegateCapability { // 代理
+            capabilities.append(delegateCapability)
+        }
+        
+        return capabilities
+    }
+    
+    // MARK: private method
+    
+    private var communicationCapability: BDPExtensionServiceCommunicationCapabilityProtocol? {
+        pyramidCreateServiceObject(BDPExtensionServiceCommunicationCapabilityProtocol.self) { capability in
+            capability.publicInterfaces = [
+                &lt;#protocol#&gt;.self
+            ]
+        }
+    }
+    
+    private var dispatchCapability: BDPExtensionServiceEventDispatchCapabilityProtocol? {
+        pyramidCreateServiceObject(BDPExtensionServiceEventDispatchCapabilityProtocol.self) { capability in
+            capability.listeningEvents = [
+                &lt;#protocol#&gt;.self
+            ]
+        }
+    }
+    
+    private var delegateCapability: BDPExtensionServiceDelegateCapabilityProtocol? {
+        pyramidCreateServiceObject(BDPExtensionServiceDelegateCapabilityProtocol.self) { capability in
+            capability.concreteExtensionServiceDelegateProtocol = &lt;#protocol#&gt;.self
+        }
+    }
+}
+
+/// 通过 oc 协议创建对象
+/// - Parameters:
+///   - ocProtocol: oc 的协议类型
+///   - builder: 构建对象回调
+/// - Returns: 新创建的实例对象
+func pyramidCreateServiceObject&lt;T&gt;(_ ocProtocolType: T.Type, builder: ((T) -&gt; Void)? = nil) -&gt; T? {
+    if let object = Pyramid.createService(NSProtocolFromString("\(ocProtocolType)")) as? T {
+        builder?(object)
+        return object
+    }
+    return nil
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CA7882A3-4337-46CD-9DB4-002787719990</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Extension Service</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

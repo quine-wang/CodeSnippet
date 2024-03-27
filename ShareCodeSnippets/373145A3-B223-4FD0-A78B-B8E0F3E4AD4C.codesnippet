@@ -3,21 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>smk</string>
+	<string></string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - &lt;#mark#&gt;</string>
+	<string>
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>01394517-6B48-4623-9632-42BA42101DAF</string>
+	<string>373145A3-B223-4FD0-A78B-B8E0F3E4AD4C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Swift Mark</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
